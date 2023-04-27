@@ -98,3 +98,8 @@ J'ai essayé d'intégrer un maximum de mes connaissances actuelles en Js. (d'où
 N'hésitez pas à parcourir le site entièrement et à passer une commande, pour passer la vérification du formulaire, il vous faudra un numéro de CB "valide", une simple suite de 16 chiffres commençant par 4 suffit à imiter un numéro de Visa.
 
 Pensez à tester la version sur mobile !
+
+
+■  Attribution : 
+
+Merci a freePik et Flaticon pour certaines icones du site. 
