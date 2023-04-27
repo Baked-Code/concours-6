@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/main.css">
+    <script src="https://kit.fontawesome.com/e98d6f08dd.js" crossorigin="anonymous"></script>
+    <title>LE THÉ DES PENTES - COMMANDE</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+    <div class="img__container--left"><img src="/img/tea.svg" alt="illustration d'un bubble tea stylisé"></div>
+    <div class="img__container--right"><img src="/img/fruit.svg" alt="illustration de fruit stylisé façon japon médiéval"></div>
+<header>
+        <div class="nav__order">
+            <div class="nav__order--left">
+                <a href="index.html?from=order">
+                    <div class="btn__home">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                    </div>
+                </a>
+                <div class="btn__previous">
+                    <i class="fa-sharp fa-solid fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="btn__basket">
+                <i class="fa-sharp fa-solid fa-basket-shopping"></i>
+                <div class="toast"></div>
+            </div>
+        </div class="nav__order">
+</header>
+<main>
+    <section class="product active">
+        <div class="product__container">
+            <div class="product__list">
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“Praline Dream”</h3><span>8€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“Dragon's Breath”</h3><span>7€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“Golden Yuzu”</h3><span>10€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“Lyon's Pride”</h3><span>9€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“Cherry Blossom Bliss”</h3><span>8€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“OLympic Bubble”</h3><span>8€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__name">
+                        <h3>“EELV”- Éclatant Équilibre de Lait Végétal</h3><span>8€</span>
+                    </div>
+                    <div class="product__number">
+                        <div class="product__number--less" ><i class="fa-solid fa-minus"></i></div>
+                        <div class="product__number--value" >0</div>
+                        <div class="product__number--more" ><i class="fa-solid fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="product__basket">
+                <h4>Votre panier :</h4>
+                <ul class="product__wanted">
+
+                </ul>
+                <p class="error-msg"></p>
+                <div class="product__display">
+                    <div class="product__display--temp">Temps: <span>0 min</span></div><div class="product__display--price">Total: <span>0€</span></div>
+                </div>
+                <div class="product__btn">
+                    <button type="button" class="btn__cta btn__cta--small btn__cta--white" id="suppr">Supprimer</button>
+                    <button type="button" class="btn__cta btn__cta--small btn__cta--white" id="order">Commander</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mobile">
+        <div class="product__basket">
+            <h4>Votre panier :</h4>
+            <ul class="product__wanted">
+
+            </ul>
+            <p class="error-msg"></p>
+            <div class="product__display">
+                <div class="product__display--temp">Temps: <span>0 min</span></div><div class="product__display--price">Total: <span>0€</span></div>
+            </div>
+            <div class="product__btn">
+                <button type="button" class="btn__cta btn__cta--small btn__cta--white" id="suppr-m">Supprimer</button>
+                <button type="button" class="btn__cta btn__cta--small btn__cta--white" id="order-m">Commander</button>
+            </div>
+        </div>
+    </section>
+    <section class="payement">
+        <div class="payement__container">
+            <div class="payement__card">
+                <div class="payement__flip">
+                    <div class="payement__front">
+                        <div class="payement__name"></div>
+                        <div class="payement__num"></div>
+                        <div class="payement__date"><span></span> / <span></span></div>
+                        <img src="/img/chip.png" alt="" class="chip">
+                        <img src="/img/visa.png" alt="" class="visa">
+                        <img src="/img/tea--kyoto.svg" alt="" class="illu--card">
+                    </div>
+                    <div class="payement__back">
+                        <div class="payement__back--stripe"></div>
+                        <div class="payement__back--sign"></div>
+                        <img src="/img/visa.png" alt="" class="visa visa--back">
+                    </div>
+                </div>
+            </div>
+            <form class="payement__form">
+                <div class="payement__input">
+                    <label for="name"><span>なまえ</span> Nom du titulaire :</label>
+                    <input type="text" name="nom" id="name">
+                </div>
+                <div class="payement__input">
+                    <label for="card"><span>ばんごう</span> Numero :</label>
+                    <input type="number" name="card--number" id="card" spinbutton="false" maxlength="16">
+                </div>
+                <div class="payement__input--date">
+                    <select id="month" focus-attr="focusDate">
+                        <option value="" selected disabled>Mois</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select id="year" focus-attr="focusDate">
+                        <option value="" selected disabled>Année</option>
+                        <option value="23">2023</option>
+                        <option value="24">2024</option>
+                        <option value="25">2025</option>
+                        <option value="26">2026</option>
+                        <option value="27">2027</option>
+                        <option value="28">2028</option>
+                    </select>
+                    <div class="payement__input">
+                        <label for="card-cvv">CVV :</label>
+                        <input type="number" name="card--cvv" id="card-cvv" spinbutton="false" maxlength="4">
+                    </div>
+                </div>
+                <p class="error-msg"></p>
+                <button type="submit" class="btn__cta btn__cta--small btn__cta--white" id="pay">Payer<span></span></button>
+            </form>
+        </div>
+    </section>
+    <section class="making">
+        <div class="making__container">
+            <div class="making__display--time">
+            </div>
+            <div class="making__loader">
+                <div class="loader__round">
+                    <div class="dot"></div> 
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="check">✓</div>
+            </div>
+            <div class="making__display--state">
+                Votre commande est en cours de preparation
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <a href="http://facebook.com"><i class="fa-brands fa-facebook"></i></a><a href="http://instagram.com"><i class="fa-brands fa-instagram"></i></a><a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a> 
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+//mixins
+@mixin flex-center($row: row){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $row;
+}
+@mixin mobile-version {
+  @media only screen and (max-device-width: 600px)  {
+      @content
+  }
+};
+
+//variables
+$color-primary: #323641;
+$color-secondary: #EBCFAB;
+$color-tertiary: #C5594B;
+$color-quaternary: #DE785A;
+
+$fam-primary: 'Kosugi Maru', sans-serif;
+$fam-secondary: 'Sawarabi Gothic', sans-serif;
+$fam-tertiary: 'Noto Sans JP', sans-serif;
+
+$dot-count: 8;
+$dot-size: 10px;
+$loader-size: 80px;
+$dot-spacing: 45deg;
+
+$dot-opacity-increment: 0.15;
+$dot-starting-opacity: 0.2;
+
+//keyframes
+
+@keyframes roll{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(-360deg);
+    }
+}
+
+@keyframes headshakes {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate{
+  to{
+    transform: rotate(360deg);
+  }
+}

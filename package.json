@@ -1,0 +1,11 @@
+{
+  "name": "concours-6",
+  "version": "1.0.0",
+  "description": "Concours pour l'ecole du Web, Créer un site pour un Restaurant / Café / Bar",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass ./style/main.scss ./style/main.css --style=compressed --watch --no-source-map"
+  },
+  "author": "Baked-Code",
+  "license": "ISC"
+}

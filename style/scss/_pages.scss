@@ -1,0 +1,402 @@
+.product{
+    width: 85%;
+    @include flex-center;
+    background-color: $color-secondary;
+    border-radius: 10px;
+    color: #000;
+    &.active{
+        transform: translateX(10%);
+    }
+    &__container{
+        @include flex-center;
+        width: 100%;
+        padding: 10px;
+        align-items: stretch;
+        height: 100%;
+        margin-top: 30px;
+    }
+    &__list{
+        flex: 2;
+        @include flex-center(column);
+        gap: 30px;
+        @include mobile-version{
+            max-height: 50vh;
+            overflow: scroll;
+            justify-content: flex-start;
+        }
+    }
+    &__wrapper{
+        width: 100%;
+        @include flex-center;
+        gap: 15px;
+    }
+    &__number{
+        flex: 1;
+        @include flex-center;
+        div{
+            @include flex-center;
+            height: 40px;
+            font-size: clamp(16px, 2.5vw, 26px);
+        }
+        &--less{
+            background: $color-primary;
+            width: 30px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            cursor: pointer;
+        }
+        &--value{
+            width: 40px;
+            background: white;
+        }
+        &--more{
+            background: $color-tertiary;
+            width: 30px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+        }
+    }
+    &__btn{
+        @include flex-center;
+        gap: 25px;
+        font-size: 16px;
+        font-family: $fam-secondary;
+        width: 100%;
+    }
+    &__basket{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%;
+        @include mobile-version{
+            display: none;
+        }
+        h4{
+            font-family: $fam-secondary;
+            font-size: clamp(16px, 2.5vw, 26px);
+            color: $color-tertiary;
+            text-align: center;
+            width: 100%;
+        }
+        .error-msg{
+            min-height: 15px;
+            color: $color-tertiary;
+        }
+    }
+    &__wanted{
+        margin-top: 40px;
+        flex:1;
+        display: block;
+        width: 100%;
+        li{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            span{
+                display: block;
+                color: $color-tertiary;
+            }
+        }
+    }
+    &__display{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+        font-size: clamp(16px, 2vw, 26px);
+        &--temp{
+            span{
+                color: $color-tertiary;
+            }
+        }
+    }
+    &__name{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0px;
+        position: relative;
+        margin-bottom: 5px;
+        color: $color-primary;
+        font-size: clamp(16px, 2.5vw, 26px);
+        min-height: 40px;
+        flex: 3;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            height: 3px;
+            background-color: $color-tertiary;
+            transition: all 0.3s ease-in-out;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 3px;
+            background-color: $color-tertiary;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+.payement{
+    width: 85%;
+    @include flex-center;
+    background-color: $color-secondary;
+    border-radius: 10px;
+    color: #000;
+    &.active{
+        transform: translateX(10%);
+    }
+    &__container{
+        @include flex-center(column);
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        height: 100%;
+        margin-top: 30px;
+        margin-bottom: -50px;
+        @include mobile-version{
+            margin-bottom: 0;
+        }
+    }
+    &__form{
+        @include flex-center(column);
+        width: 60%;
+        gap: 20px;
+        position: relative;
+        top: -60px;
+        @include mobile-version{
+            top: 0;
+        }
+        input, select{
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid $color-quaternary;
+            transition: all 0.4s ease-in-out;
+            &:focus{
+                outline: none;
+            }
+        }
+        label{
+            font-family: $fam-secondary;
+            font-size: 20px;
+            span{
+                font-family: $fam-tertiary;
+                color: $color-quaternary;
+            }
+        }
+    }
+    &__input{
+        width: 100%;
+        @include flex-center(column);
+        gap: 5px;
+        *{
+            width: 100%;
+        }
+        &--date{
+            width: 100%;
+            @include flex-center;
+            gap: 10px;
+            align-items: flex-end;
+            position: relative;
+            height: 100%;
+            input{
+                min-height: 50px;
+            }
+            *{
+                flex: 1;
+            }
+        }
+    }
+    .not-valid{
+        background: $color-tertiary;
+        animation: headshakes 0.4s ease-in-out;
+    }
+    .valid{
+        background: #00b894;
+    }
+    button span{
+        font-size: inherit;
+        margin-left: 5px;
+    }
+    &__card{
+        position: relative;
+        height: 240px;
+        width: 400px;
+        top: -100px;
+        overflow: hidden;
+        perspective: 1000px;
+        border-radius: 20px;
+        @include mobile-version{
+            display: none;
+        }
+        .chip{
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            left: 20px;
+        }
+        .visa{
+            position: absolute;
+            width: 70px;
+            right: 30px;
+            &--back{
+                width: 60px;
+                bottom: 10px;
+            }
+        }
+        .illu--card{
+            position: absolute;
+            width: 200px;
+            right: -60px;
+            bottom: -40px;
+        }
+    }
+    &__flip{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transform-style: preserve-3d;
+        will-change: transform;
+        transition: transform 0.6s;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+        pointer-events: none;
+    }
+    &__front, &__back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        background: $color-tertiary;
+        border: 2px solid $color-secondary;
+    }
+    &__front{
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+    }
+    &__back{
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        &--stripe{
+            position: relative;
+            width: 100%;
+            background: $color-primary;
+            height: 50px;
+            top: 25px;
+        }
+        &--sign{
+            position: relative;
+            width: 60%;
+            top: 30%;
+            height: 30px;
+            background: white;
+            text-align: right;
+            padding: 5px;
+            font-size: 20px;
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 80%;
+                height: 120%;
+                background: grey;
+            }
+        }
+    }
+    .flipped{
+        transform: rotateY(180deg);
+    }
+    &__num{
+        position: absolute;
+        top: 50%;
+        font-size: 28px;
+        z-index: 3;
+        left: 20px;
+        color: $color-primary;
+    }
+    &__name{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        text-transform: uppercase;
+        color: $color-primary;
+        font-size: 20px;
+        font-family: $fam-tertiary;
+    }
+    &__date{
+        position: absolute;
+        top: 65%;
+        right: 30%;
+        z-index: 3;
+        color: $color-secondary;
+        text-shadow: 0px 0px 6px rgba($color: $color-primary, $alpha: 1.0);
+    }
+}
+
+.making{
+    width: 85%;
+    @include flex-center;
+    background-color: $color-secondary;
+    border-radius: 10px;
+    color: #000;
+    min-height: clamp(400px, 60vh, 900px);
+    &.active{
+        transform: translateX(10%);
+    }
+    &.finish{
+        background: #00b894;
+        color: #fff;
+        .check{
+            display: flex;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .loader__round{
+            opacity: 0;
+        }
+    }
+    &__container{
+        @include flex-center(column);
+        width: 100%;
+        padding: 10px;
+        align-items: center;
+        height: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    &__display{
+        &--time{
+            font-size: clamp(30px, 5vw, 100px);
+            margin-bottom: 40px;
+        }
+        &--state{
+            margin-top: 40px;
+        }
+    }
+}
+.mobile{
+    width: 85%;
+    @include flex-center;
+    background-color: $color-secondary;
+    border-radius: 10px;
+    color: #000;
+    &.active{
+        transform: translateX(10%);
+        .product__basket{
+            display: flex;
+        }
+    }
+}
